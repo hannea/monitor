@@ -1,5 +1,4 @@
-##########################################################################################pack <- "monitor"
-
+##########################################################################################
 # function that converts the timestamps, creates numerics when characters, and
 # identifies the different WTs and returns a list with WTs as
 # dataframes with the same variables as the dataframe they came from.
