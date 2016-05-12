@@ -5,7 +5,7 @@ Authors@R: person("Hanne Lone", "Andersen", email = "hanne.a@outlook.com", role 
 Description: A package for monitoring vibration signals from wind turbine
     generators. The data should include time stamps as first column, and also have at least one observed load variable, such as generator speed or power.
 Depends:
-    R (>= 3.2.3)
+    R (>= 3.1.2)
 License: none
 LazyData: true
 VignetteBuilder: knitr
