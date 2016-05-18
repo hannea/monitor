@@ -7,15 +7,19 @@
 identify_WTs_func(dataframe, id = names(dataframe[1]))
 }
 \arguments{
-\item{dataframe}{A data frame containing the data from condition monitoring.}
+\item{dataframe}{A data frame containing the data from condition monitoring. The data frame
+should contain a column with unit IDs.}
 
 \item{id}{The name as a character of the column with unit IDs.}
 }
 \value{
-The data in \code{dataframe} sorted by \code{id} into a list containing dataframes, one for each wind turbines, and the time stamps are converted to POSIXct class.
+The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
+one for each wind turbines, and the time stamps are converted to POSIXct class. A string is
+printed showing the number of wind turbines in \code{dataframe}.
 }
 \description{
-Identifies the wind turbines if there are several unit IDs, and returns the same data in a list containing dataframes for each unit ID, and the time stamps are converted to POXIXct class.
+Identifies the wind turbines if there are several unit IDs, and returns the same data in
+a list containing data frames for each unit ID, and the time stamps are converted to POXIXct class.
 }
 \examples{
 identify_WTs_func(data, id = "UnitID")

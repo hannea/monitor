@@ -11,20 +11,22 @@
 
 #' Count and plot alarms using a spline with heterogeneous variance.
 #'
-#' @param load_training
-#' @param vib_training
-#' @param knots
-#' @param load_test
-#' @param vib_test
-#' @param show_figure
-#' @param show_summary
-#' @param bins
-#' @param load_min
+#' @param load_training A vector containing the training data of the load variables such as power or generator speed.
+#' @param vib_training A vector containing the Vibration signal.
+#' @param knots A vector containing the locations of the knots.
+#' @param load_test A vector with the test data.
+#' @param vib_test A vector with the test data.
+#' @param show_figure A logical vector indicating if a plot should be made.
+#' @param show_summary A logical vector stating whether the quantile summaries should be shown or not.
+#' @param bins The number of bins used.
+#' @param load_min The minimum load used.
 #'
-#' @return
+#' @return  A count of the number of alarms, alarm rate, and residuals. Further a plot is
+#' generated if \code{show_figure = TRUE}.
 #' @export
 #'
-#' @examples
+#' @examples count_alarms_hetero_var_faster(ltrain, vtrain, knots = c(20,25,27), ltest, vtest, load_min = 17)
+
 
 count_alarms_hetero_faster = function(load_training, vib_training, knots, load_test, vib_test,
                                show_figure = TRUE, show_summary = FALSE, bins = 160,
@@ -80,7 +82,7 @@ count_alarms_hetero_faster = function(load_training, vib_training, knots, load_t
     par(mar = c(4,4,2,1))
     plot(load_training,vib_training, main = "Heteroscedastic case with quantiles",
          pch = 20, col = rgb(0,0,0,0.02), xlab = "Load", ylab = "Vibrations")
-    legend("bottomright", c("mean of quantiles", "spline from mean of quantiles",
+    legend("topleft", c("mean of quantiles", "spline from mean of quantiles",
                             "3 sigma band", "test set outside band"), lwd = c(1,1,1,1),
            col = c("blue","red","red","green"), lty = c(0,1,2,0), pch = c(20,NA,NA,20), cex = 0.8)
     abline(v = knots, col = "darkgray", lty = 3)

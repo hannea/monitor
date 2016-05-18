@@ -2,14 +2,16 @@
 # Interpolation function that takes a single case.
 ##########################################################################################
 
-#' Interpolation function using intervals of 2 minutes.
+#' Interpolation function using 2 minutes intervals.
 #'
-#' The interpolation of a single wind turbine with an interval length of 2 minutes. If there is missing data in intervals larger than 10 minuttes no interpolation in done, and NAs are added.
+#' The interpolation of a single wind turbine with an interval length of 2 minutes. If there
+#' are intervals larger than 10 minuttes missing data, no interpolation in done, and NAs are added.
 #'
 #' @param dataframe A dataframe containing a single wind turbine case.
-#' @param var The variable to be interpolated.
+#' @param var The variable to be interpolated in \code{dataframe}.
 #'
-#' @return A new dataframe similar to the existing where the \code{var} has been interpolated using 2 minutes intervals.
+#' @return A new dataframe similar to the existing where the \code{var} has been interpolated
+#' using 2 minutes intervals.
 #' @export
 #'
 #' @examples interpolate_func_2mins(data, var = "GeneratorSpeed")

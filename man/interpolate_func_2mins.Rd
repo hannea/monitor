@@ -2,20 +2,22 @@
 % Please edit documentation in R/interpolate_func_2mins.R
 \name{interpolate_func_2mins}
 \alias{interpolate_func_2mins}
-\title{Interpolation function using intervals of 2 minutes.}
+\title{Interpolation function using 2 minutes intervals.}
 \usage{
 interpolate_func_2mins(dataframe, var = "PowerActual")
 }
 \arguments{
 \item{dataframe}{A dataframe containing a single wind turbine case.}
 
-\item{var}{The variable to be interpolated.}
+\item{var}{The variable to be interpolated in \code{dataframe}.}
 }
 \value{
-A new dataframe similar to the existing where the \code{var} has been interpolated using 2 minutes intervals.
+A new dataframe similar to the existing where the \code{var} has been interpolated
+using 2 minutes intervals.
 }
 \description{
-The interpolation of a single wind turbine with an interval length of 2 minutes. If there is missing data in intervals larger than 10 minuttes no interpolation in done, and NAs are added.
+The interpolation of a single wind turbine with an interval length of 2 minutes. If there
+are intervals larger than 10 minuttes missing data, no interpolation in done, and NAs are added.
 }
 \examples{
 interpolate_func_2mins(data, var = "GeneratorSpeed")

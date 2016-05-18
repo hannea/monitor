@@ -8,9 +8,26 @@ count_alarms_constant_var_faster(load_training, vib_training, knots = NULL,
   load_test, vib_test, load_min = 0)
 }
 \arguments{
-\item{load_min}{}
+\item{load_training}{A vector containing the training data of the load variables such as power or generator speed.}
+
+\item{vib_training}{A vector containing the Vibration signal.}
+
+\item{knots}{A vector containing the locations of the knots.}
+
+\item{load_test}{A vector with the test data.}
+
+\item{vib_test}{A vector with the test data.}
+
+\item{load_min}{The minimum load used.}
+}
+\value{
+A count of the number of alarms, alarm rate, and residuals. Further a plot is
+generated.
 }
 \description{
 Count and plot alarms using a spline
+}
+\examples{
+count_alarms_constant_var_faster(ltrain, vtrain, knots = c(20,25,27), ltest, vtest, load_min = 17)
 }
 

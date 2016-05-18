@@ -11,17 +11,18 @@
 
 #' Count and plot alarms using a spline
 #'
-#' @param load_training
-#' @param vib_training
-#' @param knots
-#' @param load_test
-#' @param vib_test
-#' @param load_min
+#' @param load_training A vector containing the training data of the load variables such as power or generator speed.
+#' @param vib_training A vector containing the Vibration signal.
+#' @param knots A vector containing the locations of the knots.
+#' @param load_test A vector with the test data.
+#' @param vib_test A vector with the test data.
+#' @param load_min The minimum load used.
 #'
-#' @return
+#' @return A count of the number of alarms, alarm rate, and residuals. Further a plot is
+#' generated.
 #' @export
 #'
-#' @examples
+#' @examples count_alarms_constant_var_faster(ltrain, vtrain, knots = c(20,25,27), ltest, vtest, load_min = 17)
 
 count_alarms_constant_var_faster = function(load_training,vib_training,knots=NULL,
                                             load_test,vib_test, load_min=0){
@@ -64,7 +65,7 @@ count_alarms_constant_var_faster = function(load_training,vib_training,knots=NUL
   lines(load_vec, predict(fit, data.frame(load_training=load_vec)), lwd=2, col="red")
   lines(load_vec , pred$fit + 3* sigma ,lty ="dashed", col = "red")
   lines(load_vec , pred$fit - 3* sigma ,lty ="dashed", col = "red")
-  legend("bottomright", c("spline","3 sigma band", "test set outside band"), lwd = c(1,1,1),
+  legend("topleft", c("spline","3 sigma band", "test set outside band"), lwd = c(1,1,1),
          col = c("red","red","green"), lty = c(1,2,0), pch = c(NA,NA,20), cex = 0.8)
   points(load_test[which_outside], vib_test[which_outside], col = "green", pch = 20) # not plotting when NA
 

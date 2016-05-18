@@ -6,12 +6,16 @@
 
 #' Identifies the wind turbines if several unit IDs appear.
 #'
-#' Identifies the wind turbines if there are several unit IDs, and returns the same data in a list containing dataframes for each unit ID, and the time stamps are converted to POXIXct class.
+#' Identifies the wind turbines if there are several unit IDs, and returns the same data in
+#' a list containing data frames for each unit ID, and the time stamps are converted to POXIXct class.
 #'
-#' @param dataframe A data frame containing the data from condition monitoring.
+#' @param dataframe A data frame containing the data from condition monitoring. The data frame
+#' should contain a column with unit IDs.
 #' @param id The name as a character of the column with unit IDs.
 #'
-#' @return The data in \code{dataframe} sorted by \code{id} into a list containing dataframes, one for each wind turbines, and the time stamps are converted to POSIXct class.
+#' @return The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
+#' one for each wind turbines, and the time stamps are converted to POSIXct class. A string is
+#' printed showing the number of wind turbines in \code{dataframe}.
 #' @export
 #'
 #' @examples
