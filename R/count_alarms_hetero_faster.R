@@ -82,15 +82,16 @@ count_alarms_hetero_faster = function(load_training, vib_training, knots, load_t
     par(mar = c(4,4,2,1))
     plot(load_training,vib_training, main = "Heteroscedastic case with quantiles",
          pch = 20, col = rgb(0,0,0,0.02), xlab = "Load", ylab = "Vibrations")
-    legend("topleft", c("mean of quantiles", "spline from mean of quantiles",
-                            "3 sigma band", "test set outside band"), lwd = c(1,1,1,1),
-           col = c("blue","red","red","green"), lty = c(0,1,2,0), pch = c(20,NA,NA,20), cex = 0.8)
+
     abline(v = knots, col = "darkgray", lty = 3)
     points(quantile_mean, mean_vib, col = "blue", pch = 20)
     ## use several points to show spline instead of just the means and upper/lower3sigma
     lines(load_vec,predict_mean_vib_spline,col = "red",lwd = 2) # 100 equally spaced predicted
     lines(load_vec,predict_upperspline,col = "red",lty = 2) # same for upper
     lines(load_vec,predict_lowerspline,col = "red",lty = 2) # same for lower
+    legend("topleft", c("mean of quantiles", "spline from mean of quantiles",
+                        "3 sigma band", "test set outside band"), lwd = c(1,1,1,1),
+           col = c("blue","red","red","green"), lty = c(0,1,2,0), pch = c(20,NA,NA,20), cex = 0.8)
     points(load_test[which_outside], vib_test[which_outside], col = "green", pch = 20)
   }
 

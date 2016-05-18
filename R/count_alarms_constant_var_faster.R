@@ -57,8 +57,8 @@ count_alarms_constant_var_faster = function(load_training,vib_training,knots=NUL
   abline(v = knots, col = "darkgray", lty = 3)
 
   # plot spline to training data
-  load_vec = seq(ceiling(min(load_training[!is.na(load_training)])),
-                 floor(max(load_training[!is.na(load_training)])), length.out = 100)
+  load_vec = seq(min(load_training[!is.na(load_training)]),
+                 max(load_training[!is.na(load_training)]), length.out = 100)
   pred = predict(fit, data.frame(load_training = load_vec), se.fit = T)
 
   # plot 3 sigma band
