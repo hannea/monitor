@@ -2,7 +2,7 @@
 % Please edit documentation in R/interpolate_func_2mins_identified.R
 \name{interpolate_func_2mins_identified}
 \alias{interpolate_func_2mins_identified}
-\title{Interpolation of identified data frame using 2 minutes intervals.}
+\title{Interpolation of identified data frame using 2 minute intervals.}
 \usage{
 interpolate_func_2mins_identified(dataframes, var = "PowerActual")
 }
@@ -14,7 +14,7 @@ wind turbines.}
 }
 \value{
 A data frame with time stamps and where the \code{var} has been interpolated
-using 2 minutes intervals.
+using 2 minute intervals.
 }
 \description{
 The interpolation of several wind turbines with an interval length of 2 minutes. If there

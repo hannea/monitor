@@ -23,7 +23,14 @@ kalman_filter_arma(ts, F, G, Q, m0, C0)
 The innovations, the standardized residual process and the predicted values.
 }
 \description{
-The dynamic linear model, is on the form, where \eqn{y_t = F\bm{x}_t} is the observation equation and \eqn{\bm{x}_t = G\bm{x}_{t-1} + H w_t} is the state equation, and \eqn{Q = \mbox{Var}(H w_t)}.
+Function that aplies the Kalman filter to a univariate stationary zero-mean ARMA process.
+}
+\details{
+To get the Kalman filter to work the process should be written as a dynamic linear model.
+The ARMA process written as a dynamic linear model has the form,
+where \eqn{y_t = F\bm{x}_t} is the
+observation equation and \eqn{\bm{x}_t = G\bm{x}_{t-1} + H w_t} is the state equation,
+and \eqn{Q = \mbox{Var}(H w_t)}.
 }
 \examples{
 kalman_filter_arma(ts = data, F=F, G=G, Q=Q, m0=m0, C0=C0)

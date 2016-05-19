@@ -3,8 +3,7 @@ Title: Vibration signal monitor for wind turbine generators
 Version: 0.1
 Authors@R: person("Hanne Lone", "Andersen", email = "hanne.a@outlook.com", role = c("aut", "cre"))
 URL: https://github.com/hannea/monitor
-Description: A package for monitoring vibration signals from wind turbine
-    generators. The data should include time stamps, and also have at least one observed load variable, such as generator speed or power.
+Description: A package for monitoring vibration signals from wind turbine generators. The data should include time stamps, and also have at least one observed load variable, such as generator speed or power.
 Depends:
     R (>= 3.1.2)
 License: GPL-3

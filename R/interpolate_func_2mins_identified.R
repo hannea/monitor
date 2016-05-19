@@ -6,7 +6,7 @@
 # The interpolatin is at exactly 2 mins spaces.
 ##########################################################################################
 
-#' Interpolation of identified data frame using 2 minutes intervals.
+#' Interpolation of identified data frame using 2 minute intervals.
 #'
 #' The interpolation of several wind turbines with an interval length of 2 minutes. If there
 #' are intervals larger than 10 minuttes missing data, no interpolation in done, and NAs are added.
@@ -16,7 +16,7 @@
 #' @param var The variable to be interpolated in \code{dataframes}.
 #'
 #' @return A data frame with time stamps and where the \code{var} has been interpolated
-#' using 2 minutes intervals.
+#' using 2 minute intervals.
 #' @export
 #'
 #' @examples interpolate_func_2mins(data, var = "GeneratorSpeed")

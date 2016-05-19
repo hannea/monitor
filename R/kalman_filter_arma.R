@@ -7,7 +7,13 @@
 
 #' Kalman filter applied to a univariate stationary zero-mean ARMA process.
 #'
-#' The dynamic linear model, is on the form, where \eqn{y_t = F\bm{x}_t} is the observation equation and \eqn{\bm{x}_t = G\bm{x}_{t-1} + H w_t} is the state equation, and \eqn{Q = \mbox{Var}(H w_t)}.
+#' Function that aplies the Kalman filter to a univariate stationary zero-mean ARMA process.
+#'
+#' To get the Kalman filter to work the process should be written as a dynamic linear model.
+#' The ARMA process written as a dynamic linear model has the form,
+#' where \eqn{y_t = F\bm{x}_t} is the
+#' observation equation and \eqn{\bm{x}_t = G\bm{x}_{t-1} + H w_t} is the state equation,
+#' and \eqn{Q = \mbox{Var}(H w_t)}.
 #'
 #' @param ts A univariate time series with zero mean
 #' @param F The coefficient matrix in the observation equation, as shown above.
