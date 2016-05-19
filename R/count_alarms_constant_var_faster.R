@@ -65,10 +65,9 @@ count_alarms_constant_var_faster = function(load_training,vib_training,knots=NUL
   lines(load_vec, predict(fit, data.frame(load_training=load_vec)), lwd=2, col="red")
   lines(load_vec , pred$fit + 3* sigma ,lty ="dashed", col = "red")
   lines(load_vec , pred$fit - 3* sigma ,lty ="dashed", col = "red")
+  points(load_test[which_outside], vib_test[which_outside], col = "green", pch = 20) # not plotting when NA
   legend("topleft", c("spline","3 sigma band", "test set outside band"), lwd = c(1,1,1),
          col = c("red","red","green"), lty = c(1,2,0), pch = c(NA,NA,20), cex = 0.8)
-  points(load_test[which_outside], vib_test[which_outside], col = "green", pch = 20) # not plotting when NA
-
   ###################
   ## output values ##
   ###################
