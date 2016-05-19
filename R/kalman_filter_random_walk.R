@@ -6,7 +6,7 @@
 
 #' Kalman filter applied to multivariate random walk.
 #'
-#' @param ts Multivariate time series
+#' @param ts A matrix containing the data from a multivariate time series.
 #' @param R The covariance of the meassurement noise.
 #' @param Q The covariance of the state noise.
 #' @param m0 Initial state.
