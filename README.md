@@ -2,7 +2,7 @@
 R package used to monitor wind turbines.
 
 
-# How to Install
+### How to Install
 
 To install this package use devtools:
 
