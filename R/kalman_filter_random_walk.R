@@ -12,7 +12,9 @@
 #' @param m0 Initial state.
 #' @param C0 Initial covariance of the state process.
 #'
-#' @return State values and state covariances.
+#' @return Returns a list of
+#' \item{state_values}{The state values.}
+#' \item{state_covariances}{The state covariances.}
 #' @export
 #'
 #' @examples Kalman_filter_random_walk(data)

@@ -13,9 +13,9 @@ should contain a column with unit IDs.}
 \item{id}{The name as a character of the column with unit IDs.}
 }
 \value{
-The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
+\item{out}{The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
 one for each wind turbines, and the time stamps are converted to POSIXct class. A string is
-printed showing the number of wind turbines in \code{dataframe}.
+printed showing the number of wind turbines in \code{dataframe}.}
 }
 \description{
 Identifies the wind turbines if there are several unit IDs, and returns the same data in

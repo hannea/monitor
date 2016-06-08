@@ -20,12 +20,12 @@ kalman_filter_arma(ts, F, G, Q, m0, C0)
 \item{C0}{The initial value of the state variance.}
 }
 \value{
-The innovations, the standardized residual process and the predicted values.
+The return is a list of
+\item{innovations}{The innovations.}
+\item{sd}{the standardised residuals.}
+\item{y_predicted}{the predicted values.}
 }
 \description{
-Function that aplies the Kalman filter to a univariate stationary zero-mean ARMA process.
-}
-\details{
 To get the Kalman filter to work the process should be written as a dynamic linear model.
 The ARMA process written as a dynamic linear model has the form,
 where \eqn{y_t = F\bm{x}_t} is the

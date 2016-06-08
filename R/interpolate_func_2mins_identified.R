@@ -15,8 +15,10 @@
 #' wind turbines.
 #' @param var The variable to be interpolated in \code{dataframes}.
 #'
-#' @return A data frame with time stamps and where the \code{var} has been interpolated
-#' using 2 minute intervals.
+#' @return
+#' The output is a data frame:
+#' \item{out}{A data frame with time stamps and where the \code{var} has been interpolated
+#' using 2 minute intervals.}
 #' @export
 #'
 #' @examples interpolate_func_2mins(data, var = "GeneratorSpeed")

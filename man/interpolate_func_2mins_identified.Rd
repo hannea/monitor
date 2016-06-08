@@ -13,8 +13,9 @@ wind turbines.}
 \item{var}{The variable to be interpolated in \code{dataframes}.}
 }
 \value{
-A data frame with time stamps and where the \code{var} has been interpolated
-using 2 minute intervals.
+The output is a data frame:
+\item{out}{A data frame with time stamps and where the \code{var} has been interpolated
+using 2 minute intervals.}
 }
 \description{
 The interpolation of several wind turbines with an interval length of 2 minutes. If there

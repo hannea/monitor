@@ -13,9 +13,10 @@
 #' should contain a column with unit IDs.
 #' @param id The name as a character of the column with unit IDs.
 #'
-#' @return The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
+#' @return
+#' \item{out}{The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
 #' one for each wind turbines, and the time stamps are converted to POSIXct class. A string is
-#' printed showing the number of wind turbines in \code{dataframe}.
+#' printed showing the number of wind turbines in \code{dataframe}.}
 #' @export
 #'
 #' @examples

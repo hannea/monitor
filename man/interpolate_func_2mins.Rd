@@ -14,6 +14,8 @@ interpolate_func_2mins(dataframe, var = "PowerActual")
 \value{
 A new dataframe similar to the existing where the \code{var} has been interpolated
 using 2 minute intervals.
+\item{out}{A data frame with time stamps in the first column and the second column
+where the \code{var} has been interpolated using 2 minute intervals.}
 }
 \description{
 The interpolation of a single wind turbine with an interval length of 2 minutes. If there

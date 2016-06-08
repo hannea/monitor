@@ -12,6 +12,8 @@
 #'
 #' @return A new dataframe similar to the existing where the \code{var} has been interpolated
 #' using 2 minute intervals.
+#' \item{out}{A data frame with time stamps in the first column and the second column
+#' where the \code{var} has been interpolated using 2 minute intervals.}
 #' @export
 #'
 #' @examples interpolate_func_2mins(data, var = "GeneratorSpeed")
