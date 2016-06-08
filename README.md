@@ -1,5 +1,5 @@
 # monitor
-R package with functions used to generate a monitor model of wind turbines. The monitor models are found in the Github repository on https://github.com/hannea/thesis/model_scripts.
+R package with functions used to generate a monitor model of wind turbines. The monitor models are found in the Github repository on https://github.com/hannea/thesis_scripts/models.
 
 
 ### How to Install
