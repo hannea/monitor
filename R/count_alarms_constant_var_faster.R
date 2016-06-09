@@ -1,6 +1,5 @@
 ##########################################################################################
-# Function that counts alarm and alarm rate. It uses splines fitted to the
-# training data.
+# Function that counts alarm and alarm rate. It uses splines fitted to the training data.
 # Input: takes a training and test set of load and vibrations, vector of knots,
 # and the minimum load included in the caculations.
 # So far it is still neccessary to define the knots manually.
@@ -12,7 +11,7 @@
 #' Count and plot alarms using a spline, assuming constant variance.
 #'
 #' The function uses a spline to fit to \code{vib_training} against \code{load_training}.
-#' An alarm is generated when the test data fall outside a band of three sigma.
+#' An alarm is generated when the test data fall outside a band of three sigmas.
 #' The function generates a plot by default, showing the training data falling outside the 3 sigma band.
 #'
 #' @param load_training A vector containing the training data of the load variables such as power or generator speed.

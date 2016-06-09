@@ -1,7 +1,6 @@
 ##########################################################################################
 # Function that implements the Kalman filter, when the covariances and the initial state
 # of the state process are known.
-# stationary, and state process is random walk
 ##########################################################################################
 
 #' Kalman filter applied to multivariate random walk.
