@@ -12,14 +12,12 @@ interpolate_func_2mins(dataframe, var = "PowerActual")
 \item{var}{The variable to be interpolated in \code{dataframe}.}
 }
 \value{
-A new dataframe similar to the existing where the \code{var} has been interpolated
-using 2 minute intervals.
-\item{out}{A data frame with time stamps in the first column and the second column
-where the \code{var} has been interpolated using 2 minute intervals.}
+\item{out}{A data frame with the new time stamps in the first column and the second column
+contains interpolated \code{var} using 2 minute intervals.}
 }
 \description{
 The interpolation of a single wind turbine with an interval length of 2 minutes. If there
-are intervals larger than 10 minuttes missing data, no interpolation in done, and NAs are added.
+are intervals larger than 10 minuttes with missing data no interpolation is done and NAs are added.
 }
 \examples{
 interpolate_func_2mins(data, var = "GeneratorSpeed")

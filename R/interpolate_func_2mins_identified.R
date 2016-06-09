@@ -9,16 +9,16 @@
 #' Interpolation of identified data frame using 2 minute intervals.
 #'
 #' The interpolation of several wind turbines with an interval length of 2 minutes. If there
-#' are intervals larger than 10 minuttes missing data, no interpolation in done, and NAs are added.
+#' are intervals larger than 10 minuttes the missing data no interpolation is done and NAs are added.
 #'
 #' @param dataframes A list of data frames as a result of the identified function with several
 #' wind turbines.
 #' @param var The variable to be interpolated in \code{dataframes}.
 #'
 #' @return
-#' The output is a data frame:
-#' \item{out}{A data frame with time stamps and where the \code{var} has been interpolated
-#' using 2 minute intervals.}
+#' \item{out}{A data frame with the new time stamps in the first column and the next columns,
+#' one for each wind turbine,
+#' contain interpolated \code{var} using 2 minute intervals.}
 #' @export
 #'
 #' @examples interpolate_func_2mins(data, var = "GeneratorSpeed")

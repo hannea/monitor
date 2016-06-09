@@ -7,7 +7,7 @@
 #' Identifies the wind turbines if several unit IDs appear.
 #'
 #' Identifies the wind turbines if there are several unit IDs, and returns the same data in
-#' a list containing data frames for each unit ID, and the time stamps are converted to POXIXct class.
+#' a list containing data frames for each unit ID, and the time stamps are converted to POSIXct class.
 #'
 #' @param dataframe A data frame containing the data from condition monitoring. The data frame
 #' should contain a column with unit IDs.
@@ -15,8 +15,7 @@
 #'
 #' @return
 #' \item{out}{The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
-#' one for each wind turbines, and the time stamps are converted to POSIXct class. A string is
-#' printed showing the number of wind turbines in \code{dataframe}.}
+#' one for each wind turbine. Tthe number of wind turbines in \code{dataframe} are printet.}
 #' @export
 #'
 #' @examples

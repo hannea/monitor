@@ -14,12 +14,11 @@ should contain a column with unit IDs.}
 }
 \value{
 \item{out}{The data in \code{dataframe} sorted by \code{id} into a list containing data frames,
-one for each wind turbines, and the time stamps are converted to POSIXct class. A string is
-printed showing the number of wind turbines in \code{dataframe}.}
+one for each wind turbine. Tthe number of wind turbines in \code{dataframe} are printet.}
 }
 \description{
 Identifies the wind turbines if there are several unit IDs, and returns the same data in
-a list containing data frames for each unit ID, and the time stamps are converted to POXIXct class.
+a list containing data frames for each unit ID, and the time stamps are converted to POSIXct class.
 }
 \examples{
 identify_WTs_func(data, id = "UnitID")

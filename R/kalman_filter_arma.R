@@ -5,8 +5,9 @@
 ##########################################################################################
 
 
-#' Kalman filter applied to a univariate stationary zero-mean ARMA process.
+#' Kalman filtering a univariate stationary zero-mean ARMA process.
 #'
+#' Function that applies the Kalman filter to a univariate stationary zero-mean ARMA process.
 #' To get the Kalman filter to work the process should be written as a dynamic linear model.
 #' The ARMA process written as a dynamic linear model has the form,
 #' where \eqn{y_t = F\bm{x}_t} is the
@@ -20,7 +21,7 @@
 #' @param m0 The initial value of \eqn{\bm{x}_t}.
 #' @param C0 The initial value of the state variance.
 #'
-#' @return The return is a list of
+#' @return The return is a list of the innovations, standardised residuals, and predicted values.
 #' \item{innovations}{The innovations.}
 #' \item{sd}{the standardised residuals.}
 #' \item{y_predicted}{the predicted values.}

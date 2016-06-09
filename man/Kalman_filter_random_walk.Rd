@@ -10,7 +10,7 @@ Kalman_filter_random_walk(ts, F = c(1, 1, 1, 1), R = 0.1 * diag(4),
 \arguments{
 \item{ts}{A matrix containing the data from a multivariate time series.}
 
-\item{R}{The covariance of the meassurement noise.}
+\item{R}{The covariance of the measurement noise.}
 
 \item{Q}{The covariance of the state noise.}
 
@@ -19,14 +19,13 @@ Kalman_filter_random_walk(ts, F = c(1, 1, 1, 1), R = 0.1 * diag(4),
 \item{C0}{Initial covariance of the state process.}
 }
 \value{
-Returns a list of
+Returns a list of the state values and covariances.
 \item{state_values}{The state values.}
-\item{state_covariances}{The state covariances.}
+\item{state_cov}{The state covariances.}
 }
 \description{
-Kalman filter applied to multivariate random walk.
-}
-\examples{
-Kalman_filter_random_walk(data)
+Function that applies the Kalman filter to four observations assuming the
+state is a univariate random walk. The observation and state equations
+are \eqn{\bm{y}_t = Fx_t + \bm{v}_t} and \eqn{x_t = x_{t-1} + w_t}, respectively.
 }
 

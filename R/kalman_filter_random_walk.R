@@ -6,18 +6,22 @@
 
 #' Kalman filter applied to multivariate random walk.
 #'
+#' Function that applies the Kalman filter to four observations assuming the
+#' state is a univariate random walk. The observation and state equations
+#' are \eqn{\bm{y}_t = Fx_t + \bm{v}_t} and \eqn{x_t = x_{t-1} + w_t}, respectively.
+#'
 #' @param ts A matrix containing the data from a multivariate time series.
-#' @param R The covariance of the meassurement noise.
+#' @param R The covariance of the measurement noise.
 #' @param Q The covariance of the state noise.
 #' @param m0 Initial state.
 #' @param C0 Initial covariance of the state process.
 #'
-#' @return Returns a list of
+#' @return Returns a list of the state values and covariances.
 #' \item{state_values}{The state values.}
-#' \item{state_covariances}{The state covariances.}
+#' \item{state_cov}{The state covariances.}
 #' @export
 #'
-#' @examples Kalman_filter_random_walk(data)
+# ' @examples Kalman_filter_random_walk(data)
 
 Kalman_filter_random_walk = function(ts, F=c(1,1,1,1), R = 0.1*diag(4), Q = 0.1, m0 = 0, C0 = 1){ # C0 different from zero or no noise
   # initial step
@@ -43,5 +47,5 @@ Kalman_filter_random_walk = function(ts, F=c(1,1,1,1), R = 0.1*diag(4), Q = 0.1,
     x_vec = c(x_vec, x_t_correct)
     P_vec = c(P_vec, P_t_correct)
   }
-  return(list("state_values" = x_vec, "state_covariances" = P_vec))
+  return(list("state_values" = x_vec, "state_cov" = P_vec))
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kalman_filter_arma.R
 \name{kalman_filter_arma}
 \alias{kalman_filter_arma}
-\title{Kalman filter applied to a univariate stationary zero-mean ARMA process.}
+\title{Kalman filtering a univariate stationary zero-mean ARMA process.}
 \usage{
 kalman_filter_arma(ts, F, G, Q, m0, C0)
 }
@@ -20,12 +20,13 @@ kalman_filter_arma(ts, F, G, Q, m0, C0)
 \item{C0}{The initial value of the state variance.}
 }
 \value{
-The return is a list of
+The return is a list of the innovations, standardised residuals, and predicted values.
 \item{innovations}{The innovations.}
 \item{sd}{the standardised residuals.}
 \item{y_predicted}{the predicted values.}
 }
 \description{
+Function that applies the Kalman filter to a univariate stationary zero-mean ARMA process.
 To get the Kalman filter to work the process should be written as a dynamic linear model.
 The ARMA process written as a dynamic linear model has the form,
 where \eqn{y_t = F\bm{x}_t} is the
